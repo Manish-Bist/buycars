@@ -10,7 +10,7 @@ I developed this platform to demonstrate backend session handling, database rela
 
 | Home Page | User Login Page |
 | :---: | :---: |
-| ![Home page](Screenshots/Home.png) | ![User login page](Screenshots/login.png) |
+| ![Home page](Screenshots/home.png) | ![User login page](Screenshots/login.png) |
 
 | Popular Vehicles | Featured Showcase |
 | :---: | :---: |
