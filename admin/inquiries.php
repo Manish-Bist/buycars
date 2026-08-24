@@ -13,7 +13,7 @@ require_once __DIR__ . '/includes/header.php';
 ?>
 
 <?php if (!$rows): ?>
-    <div class="empty-state" data-aos="fade-up"><i class='bx bx-message-dots'></i><h3>No inquiries yet</h3></div>
+    <div class="empty-state" data-aos="fade-up">&#128172;<h3>No inquiries yet</h3></div>
 <?php else: ?>
 <div class="table-wrap" data-aos="fade-up">
     <table class="data-table">

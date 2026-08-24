@@ -48,11 +48,11 @@ require_once __DIR__ . '/includes/header.php';
             <form method="POST" class="auth-form" novalidate>
                 <?= csrf_field() ?>
                 <div class="input-group">
-                    <i class='bx bx-envelope'></i>
+                    <span class="field-icon">&#9993;#9993;</span>
                     <input type="email" name="email" placeholder="email address" value="<?= clean($_POST['email'] ?? '') ?>" required>
                 </div>
                 <div class="input-group">
-                    <i class='bx bx-lock-alt'></i>
+                    <span class="field-icon">&#128274;#128274;</span>
                     <input type="password" name="password" placeholder="password" required>
                 </div>
                 <button type="submit" class="btn full-width">login</button>

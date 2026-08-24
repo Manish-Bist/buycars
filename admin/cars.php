@@ -34,11 +34,11 @@ require_once __DIR__ . '/includes/header.php';
 <form method="GET" class="inline-search">
     <?php if ($status !== ''): ?><input type="hidden" name="status" value="<?= clean($status) ?>"><?php endif; ?>
     <input type="text" name="q" placeholder="Search by title or brand..." value="<?= clean($q) ?>">
-    <button type="submit" class="btn btn-sm"><i class='bx bx-search'></i></button>
+    <button type="submit" class="btn btn-sm">&#128269;</button>
 </form>
 
 <?php if (!$cars): ?>
-    <div class="empty-state" data-aos="fade-up"><i class='bx bx-car'></i><h3>No cars found</h3></div>
+    <div class="empty-state" data-aos="fade-up">&#128663;<h3>No cars found</h3></div>
 <?php else: ?>
 <div class="table-wrap" data-aos="fade-up">
     <table class="data-table">
@@ -64,24 +64,24 @@ require_once __DIR__ . '/includes/header.php';
                             <?= csrf_field() ?>
                             <input type="hidden" name="car_id" value="<?= $car['id'] ?>">
                             <input type="hidden" name="action" value="approve">
-                            <button type="submit" class="icon-btn text-success" title="Approve"><i class='bx bx-check-circle'></i></button>
+                            <button type="submit" class="icon-btn text-success" title="Approve">&#10003;</button>
                         </form>
                         <form method="POST" action="car-action.php" class="inline-form">
                             <?= csrf_field() ?>
                             <input type="hidden" name="car_id" value="<?= $car['id'] ?>">
                             <input type="hidden" name="action" value="reject">
-                            <button type="submit" class="icon-btn text-danger" title="Reject"><i class='bx bx-x-circle'></i></button>
+                            <button type="submit" class="icon-btn text-danger" title="Reject">&#10007;</button>
                         </form>
                     <?php elseif ($car['status'] === 'approved'): ?>
                         <form method="POST" action="car-action.php" class="inline-form">
                             <?= csrf_field() ?>
                             <input type="hidden" name="car_id" value="<?= $car['id'] ?>">
                             <input type="hidden" name="action" value="sold">
-                            <button type="submit" class="icon-btn text-success" title="Mark as Sold"><i class='bx bx-trophy'></i></button>
+                            <button type="submit" class="icon-btn text-success" title="Mark as Sold">&#127942;</button>
                         </form>
                     <?php endif; ?>
-                    <a href="<?= BASE_URL ?>car-details.php?id=<?= $car['id'] ?>" target="_blank" class="icon-btn" title="View"><i class='bx bx-show'></i></a>
-                    <button type="button" class="icon-btn text-danger" title="Delete" onclick="confirmAdminDelete(<?= $car['id'] ?>)"><i class='bx bx-trash'></i></button>
+                    <a href="<?= BASE_URL ?>car-details.php?id=<?= $car['id'] ?>" target="_blank" class="icon-btn" title="View">&#128065;</a>
+                    <button type="button" class="icon-btn text-danger" title="Delete" onclick="confirmAdminDelete(<?= $car['id'] ?>)">&#128465;</button>
                 </td>
             </tr>
         <?php endforeach; ?>

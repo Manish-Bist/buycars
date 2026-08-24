@@ -18,7 +18,7 @@ require_once __DIR__ . '/includes/header.php';
     <div class="cars-grid-wrap">
         <?php if (!$cars): ?>
             <div class="empty-state" data-aos="fade-up">
-                <i class='bx bx-heart'></i>
+                &#9825;
                 <h3>Your wishlist is empty</h3>
                 <p>Browse cars and tap the heart icon to save your favourites.</p>
                 <a href="cars.php" class="btn">Browse Cars</a>
@@ -30,7 +30,7 @@ require_once __DIR__ . '/includes/header.php';
                         <div class="car-card-img">
                             <img src="<?= car_primary_image($pdo, $car['id']) ?>" alt="<?= clean($car['title']) ?>">
                             <span class="car-tag"><?= status_badge($car['status']) ?></span>
-                            <button class="wish-btn active" data-car="<?= $car['id'] ?>" title="Remove from wishlist"><i class='bx bxs-heart'></i></button>
+                            <button class="wish-btn active" data-car="<?= $car['id'] ?>" title="Remove from wishlist">&#9829;#9829;</button>
                         </div>
                         <div class="car-card-body">
                             <h3><?= clean($car['title']) ?></h3>

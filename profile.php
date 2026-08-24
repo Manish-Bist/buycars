@@ -57,7 +57,7 @@ require_once __DIR__ . '/includes/header.php';
 
     <div class="profile-grid">
         <div class="form-card">
-            <h3><i class='bx bx-user'></i> Basic Information</h3>
+            <h3> Basic Information</h3>
             <form method="POST" class="car-form">
                 <?= csrf_field() ?>
                 <input type="hidden" name="action" value="update_info">
@@ -78,7 +78,7 @@ require_once __DIR__ . '/includes/header.php';
         </div>
 
         <div class="form-card">
-            <h3><i class='bx bx-lock-alt'></i> Change Password</h3>
+            <h3> Change Password</h3>
             <form method="POST" class="car-form">
                 <?= csrf_field() ?>
                 <input type="hidden" name="action" value="change_password">

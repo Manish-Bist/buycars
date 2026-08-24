@@ -30,7 +30,7 @@ require_once __DIR__ . '/includes/header.php';
 ?>
 
 <div class="form-card" data-aos="fade-up" style="margin-bottom:2rem;">
-    <h3><i class='bx bx-plus-circle'></i> Add Testimonial</h3>
+    <h3>+ Add Testimonial</h3>
     <form method="POST" class="car-form">
         <?= csrf_field() ?>
         <input type="hidden" name="action" value="add">
@@ -57,7 +57,7 @@ require_once __DIR__ . '/includes/header.php';
                         <?= csrf_field() ?>
                         <input type="hidden" name="action" value="delete">
                         <input type="hidden" name="id" value="<?= $r['id'] ?>">
-                        <button type="submit" class="icon-btn text-danger" onclick="return confirm('Remove this testimonial?')"><i class='bx bx-trash'></i></button>
+                        <button type="submit" class="icon-btn text-danger" onclick="return confirm('Remove this testimonial?')">&#128465;</button>
                     </form>
                 </td>
             </tr>

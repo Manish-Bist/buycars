@@ -41,12 +41,12 @@ require_once __DIR__ . '/includes/header.php';
 
 <section class="dashboard-section" data-aos="fade-up">
     <div class="stats-grid">
-        <div class="stat-card"><i class='bx bx-car stat-icon'></i><div><h3><?= $myListingsCount ?></h3><p>Total Listings</p></div></div>
-        <div class="stat-card"><i class='bx bx-time-five stat-icon warn'></i><div><h3><?= $pendingCount ?></h3><p>Pending Review</p></div></div>
-        <div class="stat-card"><i class='bx bx-check-circle stat-icon success'></i><div><h3><?= $approvedCount ?></h3><p>Live Listings</p></div></div>
-        <div class="stat-card"><i class='bx bx-trophy stat-icon'></i><div><h3><?= $soldCount ?></h3><p>Cars Sold</p></div></div>
-        <div class="stat-card"><i class='bx bx-heart stat-icon danger'></i><div><h3><?= $wishCount ?></h3><p>Wishlist Items</p></div></div>
-        <div class="stat-card"><i class='bx bx-message-dots stat-icon'></i><div><h3><?= $inqReceivedCount ?></h3><p>Inquiries Received</p></div></div>
+        <div class="stat-card"><span class="stat-icon-sym">&#128663;</span><div><h3><?= $myListingsCount ?></h3><p>Total Listings</p></div></div>
+        <div class="stat-card"><span class="stat-icon-sym warn">&#9201;</span><div><h3><?= $pendingCount ?></h3><p>Pending Review</p></div></div>
+        <div class="stat-card"><span class="stat-icon-sym success">&#10003;</span><div><h3><?= $approvedCount ?></h3><p>Live Listings</p></div></div>
+        <div class="stat-card"><span class="stat-icon-sym">&#127942;</span><div><h3><?= $soldCount ?></h3><p>Cars Sold</p></div></div>
+        <div class="stat-card"><span class="stat-icon-sym danger">&#9825;</span><div><h3><?= $wishCount ?></h3><p>Wishlist Items</p></div></div>
+        <div class="stat-card"><span class="stat-icon-sym">&#128172;</span><div><h3><?= $inqReceivedCount ?></h3><p>Inquiries Received</p></div></div>
     </div>
 
     <div class="dash-columns">
@@ -84,7 +84,7 @@ require_once __DIR__ . '/includes/header.php';
                 <ul class="mini-list">
                     <?php foreach ($recentInquiries as $iq): ?>
                         <li>
-                            <i class='bx bxs-user-circle mini-avatar'></i>
+                            <span class="mini-avatar">&#128100;</span>
                             <div class="mini-list-info">
                                 <strong><?= clean($iq['name']) ?></strong>
                                 <span>about <?= clean($iq['car_title']) ?></span>

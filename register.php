@@ -62,23 +62,23 @@ require_once __DIR__ . '/includes/header.php';
             <form method="POST" class="auth-form" novalidate>
                 <?= csrf_field() ?>
                 <div class="input-group">
-                    <i class='bx bx-user'></i>
+                    <span class="field-icon">&#128100;#128100;</span>
                     <input type="text" name="name" placeholder="full name" value="<?= clean($_POST['name'] ?? '') ?>" required>
                 </div>
                 <div class="input-group">
-                    <i class='bx bx-envelope'></i>
+                    <span class="field-icon">&#9993;#9993;</span>
                     <input type="email" name="email" placeholder="email address" value="<?= clean($_POST['email'] ?? '') ?>" required>
                 </div>
                 <div class="input-group">
-                    <i class='bx bx-phone'></i>
+                    <span class="field-icon">&#128222;#128222;</span>
                     <input type="text" name="phone" placeholder="phone number (optional)" value="<?= clean($_POST['phone'] ?? '') ?>">
                 </div>
                 <div class="input-group">
-                    <i class='bx bx-lock-alt'></i>
+                    <span class="field-icon">&#128274;#128274;</span>
                     <input type="password" name="password" placeholder="password" required>
                 </div>
                 <div class="input-group">
-                    <i class='bx bx-lock-alt'></i>
+                    <span class="field-icon">&#128274;#128274;</span>
                     <input type="password" name="confirm_password" placeholder="confirm password" required>
                 </div>
                 <button type="submit" class="btn full-width">create account</button>

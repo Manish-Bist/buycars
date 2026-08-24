@@ -16,12 +16,12 @@ require_once __DIR__ . '/includes/header.php';
 
 <section class="dashboard-section" data-aos="fade-up">
     <div class="section-toolbar">
-        <a href="sell-car.php" class="btn"><i class='bx bx-plus-circle'></i> Sell a New Car</a>
+        <a href="sell-car.php" class="btn">+ Sell a New Car</a>
     </div>
 
     <?php if (!$cars): ?>
         <div class="empty-state" data-aos="fade-up">
-            <i class='bx bx-car'></i>
+            &#128663;
             <h3>You haven't listed any cars yet</h3>
             <p>Start selling by listing your first car.</p>
             <a href="sell-car.php" class="btn">List a Car</a>
@@ -44,9 +44,9 @@ require_once __DIR__ . '/includes/header.php';
                     <td><?= (int)$car['views'] ?></td>
                     <td><?= date('d M Y', strtotime($car['created_at'])) ?></td>
                     <td class="actions-cell">
-                        <a href="car-details.php?id=<?= $car['id'] ?>" title="View"><i class='bx bx-show'></i></a>
-                        <a href="edit-car.php?id=<?= $car['id'] ?>" title="Edit"><i class='bx bx-edit'></i></a>
-                        <a href="#" class="text-danger" title="Delete" onclick="confirmDelete(<?= $car['id'] ?>); return false;"><i class='bx bx-trash'></i></a>
+                        <a href="car-details.php?id=<?= $car['id'] ?>" title="View">&#128065;</a>
+                        <a href="edit-car.php?id=<?= $car['id'] ?>" title="Edit">&#9998;</a>
+                        <a href="#" class="text-danger" title="Delete" onclick="confirmDelete(<?= $car['id'] ?>); return false;">&#128465;</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

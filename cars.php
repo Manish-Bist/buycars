@@ -58,7 +58,7 @@ require_once __DIR__ . '/includes/header.php';
 <section class="cars-browse">
     <aside class="filters-panel" data-aos="fade-right">
         <form method="GET" id="filterForm">
-            <h3><i class='bx bx-filter-alt'></i> Filters</h3>
+            <h3>&#9776; Filters</h3>
 
             <label>Search</label>
             <input type="text" name="q" value="<?= clean($q) ?>" placeholder="brand or model...">
@@ -98,7 +98,7 @@ require_once __DIR__ . '/includes/header.php';
                 <option value="popular" <?= $sort === 'popular' ? 'selected' : '' ?>>Most viewed</option>
             </select>
 
-            <button type="submit" class="btn full-width"><i class='bx bx-search'></i> Apply Filters</button>
+            <button type="submit" class="btn full-width"> Apply Filters</button>
             <a href="cars.php" class="btn btn-outline full-width">Reset</a>
         </form>
     </aside>
@@ -106,7 +106,7 @@ require_once __DIR__ . '/includes/header.php';
     <div class="cars-grid-wrap">
         <?php if (!$cars): ?>
             <div class="empty-state" data-aos="fade-up">
-                <i class='bx bx-car'></i>
+                &#128663;
                 <h3>No cars match your filters</h3>
                 <p>Try adjusting or resetting your search.</p>
             </div>
@@ -118,17 +118,17 @@ require_once __DIR__ . '/includes/header.php';
                             <img src="<?= car_primary_image($pdo, $car['id']) ?>" alt="<?= clean($car['title']) ?>">
                             <span class="car-tag"><?= ucfirst($car['condition_type']) ?></span>
                             <?php if (is_logged_in()): ?>
-                            <button class="wish-btn" data-car="<?= $car['id'] ?>" title="Save to wishlist"><i class='bx bx-heart'></i></button>
+                            <button class="wish-btn" data-car="<?= $car['id'] ?>" title="Save to wishlist">&#9825;#9825;</button>
                             <?php endif; ?>
                         </div>
                         <div class="car-card-body">
                             <h3><?= clean($car['title']) ?></h3>
                             <div class="car-price"><?= format_price($car['price']) ?></div>
                             <ul class="car-meta">
-                                <li><i class='bx bx-calendar'></i> <?= (int)$car['year'] ?></li>
-                                <li><i class='bx bx-cog'></i> <?= ucfirst($car['transmission']) ?></li>
-                                <li><i class='bx bx-gas-pump'></i> <?= ucfirst($car['fuel_type']) ?></li>
-                                <li><i class='bx bx-map'></i> <?= clean($car['location'] ?: 'N/A') ?></li>
+                                <li>&#128197; <?= (int)$car['year'] ?></li>
+                                <li>&#9881; <?= ucfirst($car['transmission']) ?></li>
+                                <li>&#9981; <?= ucfirst($car['fuel_type']) ?></li>
+                                <li>&#128205; <?= clean($car['location'] ?: 'N/A') ?></li>
                             </ul>
                             <a href="car-details.php?id=<?= $car['id'] ?>" class="btn full-width">View Details</a>
                         </div>

@@ -19,11 +19,11 @@ require_once __DIR__ . '/includes/header.php';
 
 <form method="GET" class="inline-search">
     <input type="text" name="q" placeholder="Search by name or email..." value="<?= clean($q) ?>">
-    <button type="submit" class="btn btn-sm"><i class='bx bx-search'></i></button>
+    <button type="submit" class="btn btn-sm">&#128269;</button>
 </form>
 
 <?php if (!$users): ?>
-    <div class="empty-state" data-aos="fade-up"><i class='bx bx-group'></i><h3>No users found</h3></div>
+    <div class="empty-state" data-aos="fade-up">&#128101;<h3>No users found</h3></div>
 <?php else: ?>
 <div class="table-wrap" data-aos="fade-up">
     <table class="data-table">
@@ -31,7 +31,7 @@ require_once __DIR__ . '/includes/header.php';
         <tbody>
         <?php foreach ($users as $u): ?>
             <tr>
-                <td><i class='bx bxs-user-circle' style="font-size:2.2rem;color:var(--anotherblue);vertical-align:middle;margin-right:.6rem;"></i><?= clean($u['name']) ?></td>
+                <td><?= clean($u['name']) ?></td>
                 <td><?= clean($u['email']) ?></td>
                 <td><?= clean($u['phone'] ?: '-') ?></td>
                 <td><?= (int)$u['listing_count'] ?></td>
@@ -43,10 +43,10 @@ require_once __DIR__ . '/includes/header.php';
                         <input type="hidden" name="user_id" value="<?= $u['id'] ?>">
                         <input type="hidden" name="action" value="<?= $u['status'] === 'active' ? 'block' : 'unblock' ?>">
                         <button type="submit" class="icon-btn <?= $u['status'] === 'active' ? 'text-danger' : 'text-success' ?>" title="<?= $u['status'] === 'active' ? 'Block user' : 'Unblock user' ?>">
-                            <i class='bx <?= $u['status'] === 'active' ? 'bx-block' : 'bx-check-circle' ?>'></i>
+                            <?= $u['status'] === 'active' ? '&#128683;' : '&#10003;' ?>
                         </button>
                     </form>
-                    <button type="button" class="icon-btn text-danger" title="Delete" onclick="confirmUserDelete(<?= $u['id'] ?>)"><i class='bx bx-trash'></i></button>
+                    <button type="button" class="icon-btn text-danger" title="Delete" onclick="confirmUserDelete(<?= $u['id'] ?>)">&#128465;</button>
                 </td>
             </tr>
         <?php endforeach; ?>

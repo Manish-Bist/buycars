@@ -34,7 +34,7 @@ require_once __DIR__ . '/includes/header.php';
 
     <?php if (!$rows): ?>
         <div class="empty-state" data-aos="fade-up">
-            <i class='bx bx-message-dots'></i>
+            &#128172;
             <h3>No inquiries here yet</h3>
             <p><?= $tab === 'sent' ? 'Messages you send to sellers will show up here.' : 'When buyers contact you about your cars, it will show here.' ?></p>
         </div>
@@ -52,8 +52,8 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                     <p class="inquiry-msg"><?= nl2br(clean($r['message'])) ?></p>
                     <div class="inquiry-footer">
-                        <span><i class='bx bx-envelope'></i> <?= clean($r['email']) ?></span>
-                        <?php if ($r['phone']): ?><span><i class='bx bx-phone'></i> <?= clean($r['phone']) ?></span><?php endif; ?>
+                        <span>&#9993; <?= clean($r['email']) ?></span>
+                        <?php if ($r['phone']): ?><span>&#128222; <?= clean($r['phone']) ?></span><?php endif; ?>
                         <span class="muted"><?= time_ago($r['created_at']) ?></span>
                     </div>
                 </div>

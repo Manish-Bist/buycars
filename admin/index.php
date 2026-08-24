@@ -19,19 +19,19 @@ require_once __DIR__ . '/includes/header.php';
 ?>
 
 <div class="stats-grid admin-stats">
-    <div class="stat-card"><i class='bx bx-car stat-icon'></i><div><h3><?= $totalCars ?></h3><p>Total Cars</p></div></div>
-    <div class="stat-card"><i class='bx bx-time-five stat-icon warn'></i><div><h3><?= $pendingCars ?></h3><p>Pending Approval</p></div></div>
-    <div class="stat-card"><i class='bx bx-check-circle stat-icon success'></i><div><h3><?= $approvedCars ?></h3><p>Live Listings</p></div></div>
-    <div class="stat-card"><i class='bx bx-trophy stat-icon'></i><div><h3><?= $soldCars ?></h3><p>Cars Sold</p></div></div>
-    <div class="stat-card"><i class='bx bx-group stat-icon'></i><div><h3><?= $totalUsers ?></h3><p>Registered Users</p></div></div>
-    <div class="stat-card"><i class='bx bx-message-dots stat-icon'></i><div><h3><?= $totalInquiries ?></h3><p>Total Inquiries</p></div></div>
-    <div class="stat-card"><i class='bx bx-envelope stat-icon'></i><div><h3><?= $totalMessages ?></h3><p>Contact Messages</p></div></div>
-    <div class="stat-card"><i class='bx bx-dollar-circle stat-icon success'></i><div><h3><?= format_price($totalValue) ?></h3><p>Live Inventory Value</p></div></div>
+    <div class="stat-card"><span class="stat-icon-sym">&#128663;</span><div><h3><?= $totalCars ?></h3><p>Total Cars</p></div></div>
+    <div class="stat-card"><span class="stat-icon-sym warn">&#9201;</span><div><h3><?= $pendingCars ?></h3><p>Pending Approval</p></div></div>
+    <div class="stat-card"><span class="stat-icon-sym success">&#10003;</span><div><h3><?= $approvedCars ?></h3><p>Live Listings</p></div></div>
+    <div class="stat-card"><span class="stat-icon-sym">&#127942;</span><div><h3><?= $soldCars ?></h3><p>Cars Sold</p></div></div>
+    <div class="stat-card"><span class="stat-icon-sym">&#128101;</span><div><h3><?= $totalUsers ?></h3><p>Registered Users</p></div></div>
+    <div class="stat-card"><span class="stat-icon-sym">&#128172;</span><div><h3><?= $totalInquiries ?></h3><p>Total Inquiries</p></div></div>
+    <div class="stat-card"><span class="stat-icon-sym">&#9993;</span><div><h3><?= $totalMessages ?></h3><p>Contact Messages</p></div></div>
+    <div class="stat-card"><span class="stat-icon-sym success">&#36;</span><div><h3><?= format_price($totalValue) ?></h3><p>Live Inventory Value</p></div></div>
 </div>
 
 <?php if ($pendingCars > 0): ?>
 <div class="alert alert-warn" data-aos="fade-up">
-    <i class='bx bx-error'></i> You have <strong><?= $pendingCars ?></strong> car listing(s) waiting for approval.
+    &#9888; You have <strong><?= $pendingCars ?></strong> car listing(s) waiting for approval.
     <a href="cars.php?status=pending">Review now &rarr;</a>
 </div>
 <?php endif; ?>

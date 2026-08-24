@@ -89,6 +89,7 @@ require_once __DIR__ . '/includes/header.php';
         <?php endif; ?>
 
         <form method="POST" enctype="multipart/form-data" class="car-form">
+            <input type="hidden" name="id" value="<?= $id ?>">
             <?= csrf_field() ?>
             <div class="form-grid">
                 <div class="form-field">
@@ -151,14 +152,14 @@ require_once __DIR__ . '/includes/header.php';
             <div class="form-field full">
                 <label>Add more photos (optional)</label>
                 <div class="upload-box" id="uploadBox">
-                    <i class='bx bx-cloud-upload'></i>
+                    <span style="font-size:4rem;">&#8686;#8686;</span>
                     <p>Click or drag photos here</p>
                     <input type="file" name="images[]" id="imagesInput" accept="image/*" multiple>
                 </div>
                 <div class="preview-grid" id="previewGrid"></div>
             </div>
 
-            <button type="submit" class="btn full-width"><i class='bx bx-save'></i> Update Listing</button>
+            <button type="submit" class="btn full-width"> Update Listing</button>
         </form>
     </div>
 </section>

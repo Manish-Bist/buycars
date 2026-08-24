@@ -29,11 +29,11 @@ require_once __DIR__ . '/includes/header.php';
 <section class="quick-search" data-aos="fade-up">
     <form action="cars.php" method="GET" class="quick-search-form">
         <div class="qs-field">
-            <i class='bx bx-purchase-tag'></i>
+            &#127991;
             <input type="text" name="q" placeholder="Search brand or model e.g. Toyota">
         </div>
         <div class="qs-field">
-            <i class='bx bx-money'></i>
+            &#36;
             <select name="max_price">
                 <option value="">Any budget</option>
                 <option value="20000">Under $20,000</option>
@@ -42,25 +42,25 @@ require_once __DIR__ . '/includes/header.php';
                 <option value="100000">Under $100,000</option>
             </select>
         </div>
-        <button type="submit" class="btn"><i class='bx bx-search'></i> search cars</button>
+        <button type="submit" class="btn">&#128269; search cars</button>
     </form>
 </section>
 
 <section class="icons-container" data-aos="fade-up">
     <div class="icons">
-        <i class="fas fa-car"></i>
+        &#128663;
         <div class="content"><h3><?= (int)$totalCars ?>+</h3><p>cars listed</p></div>
     </div>
     <div class="icons">
-        <i class="fas fa-handshake"></i>
+        &#129309;
         <div class="content"><h3><?= (int)$totalSold ?>+</h3><p>cars sold</p></div>
     </div>
     <div class="icons">
-        <i class="fas fa-users"></i>
+        &#128101;
         <div class="content"><h3><?= (int)$totalUsers ?>+</h3><p>happy members</p></div>
     </div>
     <div class="icons">
-        <i class="fas fa-shield-alt"></i>
+        &#128737;
         <div class="content"><h3>100%</h3><p>verified listings</p></div>
     </div>
 </section>
@@ -111,37 +111,37 @@ require_once __DIR__ . '/includes/header.php';
     <h1 class="heading"> our <span>services</span> </h1>
     <div class="box-container">
         <div class="box myservice">
-            <i class="fas fa-car"></i>
+            &#128663;
             <h3>car selling</h3>
             <p>List your car in minutes and reach thousands of verified buyers on our marketplace.</p>
             <a href="sell-car.php" class="btn"> get started</a>
         </div>
         <div class="box">
-            <i class="fas fa-search-dollar"></i>
+            &#128269;
             <h3>easy buying</h3>
             <p>Browse, filter and compare cars by brand, price and year, then contact sellers directly.</p>
             <a href="cars.php" class="btn"> browse cars</a>
         </div>
         <div class="box">
-            <i class="fas fa-shield-alt"></i>
+            &#128737;
             <h3>admin verified</h3>
             <p>Every listing is reviewed by our team before it goes live, keeping the marketplace safe.</p>
             <a href="#" class="btn"> read more</a>
         </div>
         <div class="box">
-            <i class="fas fa-heart"></i>
+            &#9825;
             <h3>save favourites</h3>
             <p>Add cars to your wishlist and come back to compare them anytime.</p>
             <a href="wishlist.php" class="btn"> read more</a>
         </div>
         <div class="box">
-            <i class="fas fa-comments"></i>
+            &#128172;
             <h3>direct inquiries</h3>
             <p>Message sellers directly through the platform, no middle man involved.</p>
             <a href="#" class="btn"> read more</a>
         </div>
         <div class="box">
-            <i class="fas fa-headset"></i>
+            &#128241;
             <h3>24/7 support</h3>
             <p>Our support team is always ready to help with any issue you run into.</p>
             <a href="index.php#contact" class="btn"> contact us</a>
@@ -161,7 +161,7 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="content">
                         <h3><?= clean($car['title']) ?></h3>
                         <div class="stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            &#9733;&#9733;&#9733;&#9733;&#9733;
                         </div>
                         <div class="price"><?= format_price($car['price']) ?>/-</div>
                         <a href="car-details.php?id=<?= $car['id'] ?>" class="btn servicebtn">check out</a>
@@ -195,7 +195,7 @@ require_once __DIR__ . '/includes/header.php';
                         <p><?= clean($r['message']) ?></p>
                         <h3><?= clean($r['name']) ?></h3>
                         <div class="stars">
-                            <?php for ($i = 0; $i < (int)$r['rating']; $i++): ?><i class="fas fa-star"></i><?php endfor; ?>
+                            <?php for ($i = 0; $i < (int)$r['rating']; $i++): ?>&#9733;<?php endfor; ?>
                         </div>
                     </div>
                 </div>

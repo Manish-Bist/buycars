@@ -20,7 +20,7 @@ require_once __DIR__ . '/includes/header.php';
 ?>
 
 <?php if (!$rows): ?>
-    <div class="empty-state" data-aos="fade-up"><i class='bx bx-envelope'></i><h3>No messages yet</h3></div>
+    <div class="empty-state" data-aos="fade-up">&#9993;<h3>No messages yet</h3></div>
 <?php else: ?>
 <div class="inquiry-list" data-aos="fade-up">
     <?php foreach ($rows as $m): ?>
@@ -31,7 +31,7 @@ require_once __DIR__ . '/includes/header.php';
                     <?= csrf_field() ?>
                     <input type="hidden" name="message_id" value="<?= $m['id'] ?>">
                     <input type="hidden" name="action" value="delete">
-                    <button type="submit" class="icon-btn text-danger" title="Delete" onclick="return confirm('Delete this message?')"><i class='bx bx-trash'></i></button>
+                    <button type="submit" class="icon-btn text-danger" title="Delete" onclick="return confirm('Delete this message?')">&#128465;</button>
                 </form>
             </div>
             <?php if ($m['subject']): ?><p><strong>Subject:</strong> <?= clean($m['subject']) ?></p><?php endif; ?>

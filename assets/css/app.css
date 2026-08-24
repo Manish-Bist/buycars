@@ -14,9 +14,10 @@
   position: fixed; inset: 0; z-index: 99999;
   background: #0a0a1a;
   display: flex; align-items: center; justify-content: center;
-  transition: opacity .5s ease, visibility .5s ease;
+  transition: opacity .3s ease, visibility .3s ease;
 }
 .page-loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.page-loader[style*="opacity: 0"] { pointer-events: none; }
 .loader-ring {
   width: 6rem; height: 6rem;
   border: .5rem solid rgba(255,255,255,.15);
@@ -330,3 +331,30 @@
   .qs-field { width: 100%; }
   .cars-browse .filters-panel { position: static; }
 }
+
+/* ── Icon font fallbacks (when CDN fails, bx/fas classes still don't break layout) ── */
+[class*="bx-"],[class*="bxs-"],[class^="bx "],[class*=" bx "],
+[class*="fas "],[class*="far "],[class*="fab "],
+[class*="fa-"] {
+  display: inline-block;
+  min-width: 1em;
+}
+
+/* ── Loader must hide on DOMContentLoaded, not window.load ── */
+.page-loader.hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity 0.3s ease !important;
+}
+.field-icon { font-size:1.6rem; color:#aaa; flex-shrink:0; }
+
+/* stat icon symbol fallback */
+.stat-icon-sym {
+  font-size: 3.2rem;
+  color: var(--anotherblue);
+  flex-shrink: 0;
+}
+.stat-icon-sym.warn    { color: #f39c12; }
+.stat-icon-sym.success { color: #27ae60; }
+.stat-icon-sym.danger  { color: #e74c3c; }

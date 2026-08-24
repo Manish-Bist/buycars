@@ -130,14 +130,14 @@ require_once __DIR__ . '/includes/header.php';
             <div class="form-field full">
                 <label>Photos * (you can select multiple)</label>
                 <div class="upload-box" id="uploadBox">
-                    <i class='bx bx-cloud-upload'></i>
+                    <span style="font-size:4rem;">&#8686;#8686;</span>
                     <p>Click or drag photos here</p>
                     <input type="file" name="images[]" id="imagesInput" accept="image/*" multiple required>
                 </div>
                 <div class="preview-grid" id="previewGrid"></div>
             </div>
 
-            <button type="submit" class="btn full-width"><i class='bx bx-upload'></i> Submit Listing</button>
+            <button type="submit" class="btn full-width"> Submit Listing</button>
         </form>
     </div>
 </section>

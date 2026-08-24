@@ -61,12 +61,12 @@ require_once __DIR__ . '/includes/header.php';
         <div class="cd-price"><?= format_price($car['price']) ?></div>
 
         <div class="cd-specs">
-            <div><i class='bx bx-calendar'></i><span>Year</span><strong><?= (int)$car['year'] ?></strong></div>
-            <div><i class='bx bx-tachometer'></i><span>Mileage</span><strong><?= number_format($car['mileage']) ?> km</strong></div>
-            <div><i class='bx bx-cog'></i><span>Transmission</span><strong><?= ucfirst($car['transmission']) ?></strong></div>
-            <div><i class='bx bx-gas-pump'></i><span>Fuel</span><strong><?= ucfirst($car['fuel_type']) ?></strong></div>
-            <div><i class='bx bx-palette'></i><span>Color</span><strong><?= clean($car['color'] ?: 'N/A') ?></strong></div>
-            <div><i class='bx bx-map'></i><span>Location</span><strong><?= clean($car['location'] ?: 'N/A') ?></strong></div>
+            <div>&#128197;<span>Year</span><strong><?= (int)$car['year'] ?></strong></div>
+            <div>&#9881;<span>Mileage</span><strong><?= number_format($car['mileage']) ?> km</strong></div>
+            <div>&#9881;<span>Transmission</span><strong><?= ucfirst($car['transmission']) ?></strong></div>
+            <div>&#9981;<span>Fuel</span><strong><?= ucfirst($car['fuel_type']) ?></strong></div>
+            <div>&#127912;<span>Color</span><strong><?= clean($car['color'] ?: 'N/A') ?></strong></div>
+            <div>&#128205;<span>Location</span><strong><?= clean($car['location'] ?: 'N/A') ?></strong></div>
         </div>
 
         <h3>Description</h3>
@@ -75,16 +75,16 @@ require_once __DIR__ . '/includes/header.php';
         <div class="cd-actions">
             <?php if (is_logged_in()): ?>
                 <button class="btn wish-btn-lg <?= $isWishlisted ? 'active' : '' ?>" data-car="<?= $car['id'] ?>">
-                    <i class='bx <?= $isWishlisted ? 'bxs-heart' : 'bx-heart' ?>'></i> <?= $isWishlisted ? 'Saved' : 'Save to Wishlist' ?>
+                    <?= $isWishlisted ? '&#9829; Saved' : '&#9825; Save to Wishlist' ?>
                 </button>
             <?php endif; ?>
             <?php if (current_user_id() != $car['seller_id']): ?>
-                <button class="btn btn-outline" onclick="document.getElementById('inquiryModal').classList.add('open')"><i class='bx bx-message-dots'></i> Contact Seller</button>
+                <button class="btn btn-outline" onclick="document.getElementById('inquiryModal').classList.add('open')"> Contact Seller</button>
             <?php endif; ?>
         </div>
 
         <div class="seller-card">
-            <i class='bx bxs-user-circle'></i>
+            &#128100;#128100;
             <div>
                 <h4><?= clean($car['seller_name']) ?></h4>
                 <p>Member since <?= date('M Y', strtotime($car['seller_since'])) ?></p>
