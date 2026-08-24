@@ -1,12 +1,10 @@
-# BuyCars — Car Buy & Sell Marketplace
+# 🚗 BuyCars — Car Buy & Sell Marketplace
 
-BuyCars is a full-stack web application designed for buying, listing, and managing vehicle sales. Built using PHP 8 and MySQL, the platform features dynamic searching, wishlist tracking, a direct buyer-to-seller inquiry system, and a comprehensive admin control panel for moderation.
-
-I developed this platform to demonstrate backend session handling, database relationship mapping with PDO, dynamic state updates via AJAX, and role-based administrative workflows.
+BuyCars is a full-stack web application designed for buying, listing, and managing vehicle sales[cite: 1]. Built using PHP 8 and MySQL, the platform features dynamic searching, wishlist tracking, a direct buyer-to-seller inquiry system, dynamic state updates via AJAX, and a comprehensive admin control panel for moderation.
 
 ---
 
-## Screenshots
+## 📸 Screenshots
 
 | Home Page | User Login Page |
 | :---: | :---: |
@@ -22,52 +20,43 @@ I developed this platform to demonstrate backend session handling, database rela
 
 ---
 
-## Features
+## ✨ Features
 
-### Buyer & Seller Platform
-- **Advanced Search & Filtering:** Filter vehicles by brand, fuel type, transmission, and max budget with custom sorting options.
-- **Interactive Listings:** Multi-photo upload gallery, detailed spec sheet, and seller contact details.
-- **Wishlist Management:** Save favorite vehicles instantly via background AJAX toggles[cite: 2].
-- **Direct Messaging:** Built-in inquiry form enabling direct communication with car sellers[cite: 2].
-- **User Dashboard:** Dedicated profile management to track active listings, inquiries, and saved cars[cite: 2].
+### User Side
+| Feature | Details |
+|---|---|
+| **Browse & Search** | Filter by brand, fuel, transmission, max price; sort by date / price / views |
+| **Car Details** | Full multi-photo gallery with thumbnail preview, specs, seller info[cite: 1, 2] |
+| **Wishlist** | Save favourite cars with instantaneous background AJAX toggles[cite: 1, 2] |
+| **Sell a Car** | Multi-photo upload form, pending admin approval workflow[cite: 1, 2] |
+| **Inquiry System** | Message sellers directly from the car detail page[cite: 1, 2] |
+| **Dashboard** | Dedicated user stats overview — active listings, inquiries, wishlist count[cite: 1, 2] |
+| **My Listings** | View, edit, and manage your own car posts |
+| **Profile** | Update name / phone / change password |
+| **Reviews & Feedback** | Homepage testimonials pulled dynamically from the database |
+| **Newsletter** | Integrated email subscription form |
+| **Contact Form** | General enquiry form routed directly to the admin inbox |
 
 ### Admin Panel (`/admin/`)
-- **Listing Moderation:** Approve, reject, mark as sold, or delete submitted vehicle posts[cite: 2].
-- **Analytics Dashboard:** Live metrics tracking active listings, platform inquiries, user counts, and total inventory valuation[cite: 2].
-- **User & Content Control:** Moderation tools to manage accounts, review contact submissions, and update homepage testimonials[cite: 2].
+| Feature | Details |
+|---|---|
+| **Dashboard** | Live metrics tracking active listings, platform inquiries, user counts, and total inventory valuation[cite: 1, 2] |
+| **Manage Cars** | Approve, reject, mark as sold, or delete submitted vehicle posts[cite: 1, 2] |
+| **Manage Users** | Block, unblock, or delete user accounts |
+| **View Inquiries** | Audit and manage all buyer-seller messages |
+| **Contact Messages** | Review messages from the Contact Us form; auto-marks as read |
+| **Testimonials** | Control and update homepage reviews[cite: 1, 2] |
 
 ---
 
-## Security Practices
+## 🔒 Security Practices
 
-- Password hashing using `password_hash()` (bcrypt)[cite: 2].
-- Prepared statements via PDO to prevent SQL injection vulnerabilities[cite: 2].
-- CSRF token validation on all form requests[cite: 2].
-- File extension and MIME-type validation for image uploads (max 5 MB limit)[cite: 2].
-- Strict middleware checks (`require_admin()`) guarding administrative endpoints[cite: 2].
-
----
-
-## Tech Stack
-
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+), Swiper.js, AOS.js, Boxicons[cite: 2]
-- **Backend:** PHP 8+[cite: 2]
-- **Database:** MySQL (PDO)[cite: 2]
+- **Password Hashing:** Secure password hashing using `password_hash()` (bcrypt)[cite: 1, 2].
+- **Prepared Statements:** Prepared statements via PDO to prevent SQL injection vulnerabilities[cite: 1, 2].
+- **CSRF Protection:** CSRF token validation on all form requests[cite: 1, 2].
+- **Upload Validation:** Strict file extension and MIME-type validation for image uploads (max 5 MB limit)[cite: 1, 2].
+- **Middleware Guards:** Strict middleware checks (`require_admin()`) guarding administrative endpoints[cite: 1, 2].
 
 ---
 
-## Database & Installation Setup
-
-### 1. Database Setup
-1. Launch **Apache** and **MySQL** in your local server environment (XAMPP/WAMP)[cite: 2].
-2. Open **phpMyAdmin** (`http://localhost/phpmyadmin`) and create a new database named **`car_marketplace`**[cite: 2].
-3. Select `car_marketplace`, open the **Import** tab, choose `database/car_marketplace.sql`, and click **Go**[cite: 2].
-
-### 2. Connection Settings
-Ensure your credentials in `config/db.php` match your environment[cite: 2]:
-
-```php
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'car_marketplace');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+## 📁 Project Structure
